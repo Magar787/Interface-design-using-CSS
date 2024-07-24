@@ -1,0 +1,196 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #4d221b; /* Chocolate brown background */
+    color: #f0f0f0; /* Milky white text color */
+}
+
+/* Header styles */
+header {
+    background-color: #331a12; /* Darker brown for header */
+    padding: 10px 0;
+    position: sticky; /* Sticky positioning for header */
+    top: 0; /* Stick to the top */
+    z-index: 999; /* Ensure it stays on top of other content */
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo-top img {
+    max-width: 100px; /* Logo size */
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 20px; /* Space between navigation items */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #f0f0f0;
+    font-weight: bold;
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+nav ul li a:hover {
+    color: #ffd700; /* Hershey's yellow color on hover */
+}
+
+/* Main content styles */
+main {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+.section-content {
+    margin-bottom: 40px;
+}
+
+.product {
+    background-color: #5c352a; /* Lighter brown background for products */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    text-align: center;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease; /* Smooth hover effect */
+}
+
+.product:hover {
+    transform: translateY(-5px); /* Lift product on hover */
+}
+
+.product img {
+    width: 100%;
+    max-width: 300px; /* Limit image width */
+    height: auto;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for image */
+}
+
+/* Contact form styles */
+#contact form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #5c352a; /* Lighter brown background for form */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for form */
+}
+
+#contact input[type="text"],
+#contact input[type="email"],
+#contact textarea {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #8c5c4c; /* Lighter brown border for inputs */
+    border-radius: 4px;
+    font-size: 14px;
+    background-color: #f0f0f0; /* Milky white background for inputs */
+    color: #333; /* Darker text color */
+}
+
+#contact button[type="submit"] {
+    background-color: #331a12; /* Darker brown background for button */
+    color: #f0f0f0;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+#contact button[type="submit"]:hover {
+    background-color: #5c352a; /* Lighter brown on hover */
+}
+
+/* Footer styles */
+footer {
+    background-color: #331a12; /* Darker brown for footer */
+    color: #f0f0f0;
+    padding: 20px 0;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer-content .logo img {
+    max-width: 80px; /* Logo size in footer */
+}
+
+/* Responsive design adjustments */
+@media (max-width: 1200px) {
+    .header-content {
+        padding: 0 10px;
+    }
+
+    .product {
+        padding: 15px;
+    }
+
+    #contact form {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column; /* Stack header elements vertically */
+        align-items: flex-start;
+    }
+
+    .logo-top {
+        margin-bottom: 10px;
+    }
+
+    nav ul {
+        flex-direction: column; /* Stack navigation items vertically */
+    }
+
+    nav ul li {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    nav ul li a {
+        padding: 10px 0; /* Better spacing on smaller screens */
+        display: block;
+        text-align: center;
+    }
+
+    .product {
+        text-align: left; /* Left-align text in products */
+    }
+
+    #contact form {
+        max-width: 100%; /* Full width on small screens */
+    }
+}
